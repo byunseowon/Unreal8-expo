@@ -428,6 +428,7 @@
     { team: "12조", title: "미열", image: "img/team12.png", notionUrl: "https://app.notion.com/p/teamsparta/8-12-3f42dc3ef51480748072c6128279fdaf" },
     { team: "13조", title: "Festa Fiesta", image: "img/team13.png", notionUrl: "https://app.notion.com/p/3b12dc3ef514808a9247c952c9ecf639" },
     { team: "14조", title: "이세계 편의점", image: "img/team14.gif", notionUrl: "https://app.notion.com/p/teamsparta/8-14-3b12dc3ef51480939c61cf3a39709f0a?source=copy_link" },
+    { team: "", title: "Outbreak Breaker", image: "img/team15.png", notionUrl: "https://app.notion.com/p/teamsparta/Outbreak-Breaker-3b22dc3ef514807aa863d1427ecbc153?v=32f2dc3ef5148074bffa000ce95cce75&source=copy_link" },
   ];
 
   // ---- 전시 프로젝트 카드 ----
@@ -443,7 +444,7 @@
     a.innerHTML = `
       ${thumb}
       <div class="info">
-        <div class="team">${p.team}</div>
+        ${p.team ? `<div class="team">${p.team}</div>` : ''}
         <div class="title">${p.title}</div>
       </div>`;
     grid.appendChild(a);
